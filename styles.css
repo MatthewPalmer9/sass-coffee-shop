@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'CustomLightFont';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/300-light.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: 'CustomRegularFont';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/400-regular.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: 'CustomMediumFont';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/500-medium.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: 'CustomBoldFont';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/600-bold.woff2") format("opentype");
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: ghostwhite;
+}
+/*# sourceMappingURL=styles.css.map */
