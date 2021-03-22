@@ -37,11 +37,6 @@ body {
   background-color: ghostwhite;
 }
 
-header {
-  height: 100vh;
-  background-color: ghostwhite;
-}
-
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,18 +49,27 @@ nav {
           align-items: center;
   width: 100vw;
   height: 60px;
-  background-color: burlywood;
+  background-color: rgba(138, 119, 96, 0.8);
 }
 
-nav div.brand {
+nav #brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'CustomBoldFont';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: ghostwhite;
   width: 100%;
   height: 100%;
   margin: 20px;
 }
 
-nav div.brand p {
+nav #brand p {
   width: 100%;
   padding-left: 20px;
+  text-transform: capitalize;
 }
 
 nav div.nav-list {
@@ -92,7 +96,8 @@ nav div.nav-list ul {
   height: 40px;
   width: auto;
   list-style: none;
-  margin: 0;
+  margin: 0 50px;
+  padding: 0;
 }
 
 nav div.nav-list ul li {
@@ -109,7 +114,67 @@ nav div.nav-list ul li {
 
 nav div.nav-list ul li a {
   width: 100%;
+  font-family: 'CustomBoldFont';
+  color: ghostwhite;
   text-align: center;
   text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  padding-top: 15%;
+  width: 100%;
+  font-size: 2.2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("./img/coffee-bg.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./img/coffee-bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  color: ghostwhite;
+  width: 100%;
+}
+
+header p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: ghostwhite;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 900px) {
+  a {
+    display: none;
+  }
+  header {
+    font-size: 2rem;
+    padding-top: 20%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    font-size: 1.6rem;
+  }
+  nav #brand p {
+    width: 200px;
+    padding-left: 100px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
