@@ -59,8 +59,26 @@
     </header>
 
     <section>
-
+        <div class="container">
+            <div class="info-card">
+                <h3>Your Next Coffee Affair</h3>
+                <p>Everything in this city is worth waiting in line for.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus veritatis pariatur, magni assumenda molestias quos suscipit sapiente id voluptas tempora aut quas rerum laboriosam amet, ea illo mollitia temporibus, aperiam quo neque. Perferendis, veritatis nemo voluptatibus ipsam libero voluptate similique consequuntur voluptatum quidem cupiditate odio minima iure aliquam. Dolorum aperiam hic quasi dolores quisquam quaerat magni facilis recusandae nulla esse in modi sed alias ut, vel corrupti molestiae iure, mollitia nihil odit obcaecati quos praesentium quibusdam! Eligendi recusandae iure obcaecati harum, odit nostrum. Deserunt provident nisi totam itaque ad. Vel totam autem adipisci nulla dignissimos aspernatur laboriosam aliquid fuga aliquam.</p>
+            </div>
+            <div class="info-card"></div>
+            <div class="info-card"></div>
+        </div>
     </section>
+
+    <script>
+        const allNavLinks = document.querySelectorAll("ul li a");
+        document.addEventListener("DOMContentLoaded", () => {
+            allNavLinks.forEach(link => {
+                link.classList.add("animated")
+                link.classList.add("fadeInFromRight")
+            });
+        });
+    </script>
     
 </body>
 </html>

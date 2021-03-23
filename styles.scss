@@ -26,6 +26,14 @@
     src: url("./fonts/600-bold.woff2") format("opentype");
 }
 
+* { 
+    // border: 1px solid red;
+}
+
+.animated {
+    animation-duration: 1.5s;
+}
+
 body {
     margin: 0;
     font-family: 'CustomMediumFont';
@@ -34,6 +42,42 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: ghostwhite;
+}
+
+.container {
+    display: flex;
+    background-color: ghostwhite;
+    height: 100%;
+    width: 100%;
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid ghostwhite;
+        height: 80%;
+        width: 33%;
+        background-color: rgba(222, 184, 135, 0.8);
+        box-shadow: 0 0 70px -25px;
+        margin: 10px;
+
+        h3 {
+            font-size: 1.2rem;
+            
+        }
+
+        p {
+            font-size: .85rem;
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.fadeInFromRight {
+    animation-name: fadeInFromRight;
 }
 
 nav {
@@ -48,6 +92,7 @@ nav {
     #brand {
         display: flex;
         font-family: 'CustomBoldFont';
+        font-size: 1.5rem;
         align-items: center;
         color: ghostwhite;
         width: 100%;
@@ -58,6 +103,7 @@ nav {
             width: 100%;
             padding-left: 20px;
             text-transform: capitalize;
+            white-space: nowrap;
         }
     }
 
@@ -83,9 +129,12 @@ nav {
                 padding: 20px;
                 width: 100%;
                 white-space: nowrap;
+                animation: fadeInFromRight;
+                transition: 300ms;
         
                 a {
                     width: 100%;
+                    border-bottom: 1px dotted white;
                     font-family: 'CustomBoldFont';
                     color: ghostwhite;
                     text-align: center;
@@ -97,7 +146,7 @@ nav {
 }
 
 header {
-    height: 100vh;
+    height: 85vh;
     padding-top: 15%;
     width: 100%;
     font-size: 2.2rem;
@@ -125,17 +174,64 @@ section {
     height: 100vh;
 }
 
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+
+// Media Queries
+
+// @media only screen and (max-width: 1500px) {
+//     .info-card {
+//         h3 {
+//             font-size: 3.5rem;
+//         }
+//     }
+// }
+
+@media only screen and (max-width: 1000px) {
+    p {
+        font-size: .08rem;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     a { display: none; }
     header { 
         font-size: 2rem;
         padding-top: 20%;
     }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .09rem;
+    }
 }
 
 @media only screen and (max-width: 700px) {
     header {
         font-size: 1.6rem;
+        padding-top: 25%;
     }
 
     nav #brand p {
